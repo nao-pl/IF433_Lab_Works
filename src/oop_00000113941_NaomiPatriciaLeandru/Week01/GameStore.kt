@@ -4,3 +4,7 @@ fun main(){
     val gameTitle: String = "Counter Strike"
     val price: Int = 300_000
 }
+
+fun calculateDiscount(price: Int): Int =
+    if(price > 500_000) (price * 20) / 100 
+    else(price * 10) / 100
