@@ -1,4 +1,4 @@
-package oop_naomi_patricia_leandru.Week03
+package oop_00000113941_NaomiPatriciaLeandru.Week03
 
 class Player(val username: String){
     private var xp: Int = 0
