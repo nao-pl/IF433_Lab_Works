@@ -4,6 +4,6 @@ class ElectricCar(brand: String, numberOfDoors: Int, val batteryCapacity: Int) :
 
     final override fun accelerate() {
         speed += 10
-        println("$brand berakselerasi diem-diem. Kapasitas baterai: $batteryCapacity% kWh.")
+        println("$brand berakselerasi diem-diem. Kapasitas baterai: $batteryCapacity%")
     }
 }
