@@ -1,0 +1,15 @@
+package oop_00000113941_NaomiPatriciaLeandru.Week08
+
+sealed class Product{
+    data class Eletronic(
+        val id: String, 
+        val name: String, 
+        val warrantyMonths: Int
+        ) : Product()
+
+    data class Clothing(
+        val id: String, 
+        val name: String, 
+        val size: String
+    ) : Product()
+}
