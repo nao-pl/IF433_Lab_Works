@@ -13,7 +13,7 @@ class ApiParser{
         val type = rawJson["type"] as? String ?: return null
         return when (type.uppercase()){
             "ELECTRONIC" -> {
-                val warranty = rawJson["warrantyMonths"] as? Int ?: 12
+                val warranty = rawJson["warranty"] as? Int ?: 12
                 Product.Electronic(id, name, warranty)
             }
             "CLOTHING" -> {

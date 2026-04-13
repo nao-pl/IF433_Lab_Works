@@ -1,7 +1,7 @@
 package oop_00000113941_NaomiPatriciaLeandru.Week08
 
 sealed class Product{
-    data class Eletronic(
+    data class Electronic(
         val id: String, 
         val name: String, 
         val warrantyMonths: Int
