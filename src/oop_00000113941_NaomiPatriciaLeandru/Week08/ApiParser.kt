@@ -25,12 +25,14 @@ class ApiParser{
     }
 
     fun checkout(product: Product): String{
-    val id = when (product){
-        is Product.Electronic -> product.id
-        is Product.Clothing -> product.id
-    }
+        val id = when (product){
+            is Product.Electronic -> product.id
+            is Product.Clothing -> product.id
+        }
 
-    val trxId = JavaPaymentService.processPayment(id)!!
-    return "Payment Success! Transaction ID: $trxId"
-}
-}
+        val trxId = JavaPaymentService.processPayment(id)!!
+        return "Payment Success! Transaction ID: $trxId"
+    }
+} 
+
+//I already fixed the problem at checkpoint 9
