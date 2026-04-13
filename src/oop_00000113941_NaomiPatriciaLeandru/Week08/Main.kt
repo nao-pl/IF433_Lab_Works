@@ -37,4 +37,12 @@ fun main(){
     val someObject: Any = 100
     val safeInt = someObject as? Int ?: 0
     println("Hasil cast + fallback: $safeInt")
+
+    println("\n=== TEST THE RED BUTTON (!!) ===")
+    val toxicData: String? = null
+    try{
+        val length = toxicData!!.length
+    }catch (e: NullPointerException){
+        println("CRASH (NPE)! Jangan gunakan !! secara sembarangan.")
+    }
 } 
