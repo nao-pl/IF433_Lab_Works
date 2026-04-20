@@ -24,4 +24,8 @@ fun main(){
         .map { "LOSS [${it.pair} - ${it.position.uppercase()}]: ${it.roe}% ROE (Lev: ${it.leverage}x)" }
 
     val uniquePairs = tradeHistory.map { it.pair }.toSet()
+
+    println("\n=== CRYPTO TRADING DASHBOARD ===")
+    println("Unique Pairs Traded: ${uniquePairs.joinToString(", ")}")
+    topPerformerString.forEach { println(it) }
 }
