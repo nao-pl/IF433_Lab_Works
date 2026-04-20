@@ -12,5 +12,6 @@ fun main(){
 
     println("=== ALL TRADES ===")
     val closedTrades = tradeHistory.filter { it.status == "Closed" }
-    val winTrades = closedTrades.filter { it.roe > 0 }
+    val winningTrades = closedTrades.filter { it.roe > 0 }
+    val losingTrades = closedTrades.filter { it.roe <= 0 }
 }
