@@ -10,7 +10,6 @@ fun main(){
         TradeLog("DOT/USDT", "Short", 12, -5.0, "Closed")
     )
 
-    println("=== ALL TRADES ===")
     val closedTrades = tradeHistory.filter { it.status == "Closed" }
     val winningTrades = closedTrades.filter { it.roe > 0 }
     val losingTrades = closedTrades.filter { it.roe <= 0 }
@@ -28,4 +27,7 @@ fun main(){
     println("\n=== CRYPTO TRADING DASHBOARD ===")
     println("Unique Pairs Traded: ${uniquePairs.joinToString(", ")}")
     topPerformerString.forEach { println(it) }
+    
+    worstPerformingString.forEach { println(it) }
+    println(uniquePairs.joinToString(", "))
 }
