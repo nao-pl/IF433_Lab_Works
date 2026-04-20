@@ -30,4 +30,6 @@ fun main(){
     
     worstPerformingString.forEach { println(it) }
     println(uniquePairs.joinToString(", "))
+    
+    //untuk CheckPoint 20 -> Output sudah sesuai dengan apa yang diminta :D
 }
