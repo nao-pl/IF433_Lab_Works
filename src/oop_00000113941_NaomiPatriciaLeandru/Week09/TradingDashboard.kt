@@ -22,4 +22,6 @@ fun main(){
     val worstPerformingString = losingTrades
         .sortedBy { it.roe }
         .map { "LOSS [${it.pair} - ${it.position.uppercase()}]: ${it.roe}% ROE (Lev: ${it.leverage}x)" }
+
+    val uniquePairs = tradeHistory.map { it.pair }.toSet()
 }
