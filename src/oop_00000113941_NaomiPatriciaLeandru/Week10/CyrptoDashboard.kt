@@ -17,3 +17,5 @@ fun main(){
     val txRepo = WalletRepository<Transaction>()
     txRepo.addItem(Transaction("tx123", 0.5))
 }
+
+//the display is already correct ya :D
