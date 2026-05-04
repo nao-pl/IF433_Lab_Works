@@ -47,4 +47,13 @@ fun main(){
     searchResult?.let{
         println(it.diagnose())
     }
+
+    with(homeDevices){
+        println("=== DAFTAR PERANGKAT SMART HOME ===")
+        println("Total perangkat: ${size}")
+
+        forEach{
+            println("- ${it.name} (${it.category}) | Status: ${if (it.isOnline) "Online" else "Offline"} | Daya: ${it.powerLoad} Watt")
+        }
+    }
 }
