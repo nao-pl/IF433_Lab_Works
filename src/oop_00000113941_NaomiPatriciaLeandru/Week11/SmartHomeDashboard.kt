@@ -56,4 +56,9 @@ fun main(){
             println("- ${it.name} (${it.category}) | Status: ${if (it.isOnline) "Online" else "Offline"} | Daya: ${it.powerLoad} Watt")
         }
     }
+
+    val totalPower = homeDevices.run{
+        sumOf{ it.powerLoad}
+    }
+    println("Total konsumsi daya: $totalPower Watt")
 }
