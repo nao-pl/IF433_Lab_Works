@@ -53,3 +53,5 @@ fun main(){
         println("Opsional: Berikan chicken jerky secara manual")
     }
 }
+
+// Codingan sudah dapat berjalan dengan benar sesuai dengan apa yang diinginkan module :D
