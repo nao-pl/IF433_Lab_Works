@@ -12,8 +12,16 @@ data class TradeRecord(
 fun TradeRecord.toCsv(): String = "$id,$symbol,$type,$margin,$pnl"
 
 fun fromCsvTrade(line: String): TradeRecord?{
-    val parts = line.split(",")
-    return if(parts.size == 5){
-        TradeRecord(parts[0].toInt(), parts[1], parts[2], parts[3].toDouble(), parts[4].toDouble())
-    }else null
-}
+    return try{
+        val parts = line.split(",")
+
+        if(parts.size == 5){
+            TradeRecord(parts[0].toInt(), parts[1], parts[2], parts[3].toDouble(), parts[4].toDouble())
+        }else{
+            null
+        }
+    }catch(e: Exception){
+        println("Error parsing line: $line")
+        null
+    }
+} 
